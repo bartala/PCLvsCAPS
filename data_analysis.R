@@ -13,7 +13,7 @@ library(caret)      # confusionMatrix
 set.seed(123)
 
 # ============================ Load & prep data =================================
-PCL_CAPS <- read_excel("Desktop/caps/PCL_CAPS_ALL.xlsx")
+PCL_CAPS <- read_excel(".../caps/PCL_CAPS_ALL.xlsx")
 
 # keep rows with PCL items present; drop any remaining NA rows
 PCL_CAPS <- PCL_CAPS[!is.na(PCL_CAPS$pcl_q1), ]

@@ -1,5 +1,6 @@
 #  Short 6-Item Screener for Childbirth-Related PTSD
 ## Overview
+Childbirth-related posttraumatic stress disorder (CB-PTSD) is an under-recognized maternal mental health condition with significant implications for mothers and infants. While the PTSD Checklist for DSM-5 (PCL-5) is widely validated, its 20 items may be burdensome for postpartum screening. We analyzed data from 107 women who experienced traumatic childbirth, with PTSD diagnosis confirmed via the CAPS-5 gold standard. Using nested bootstrap resampling with LASSO variable selection and Firth-penalized logistic regression, we identified a stable six-item subset of the PCL-5 that retained strong predictive accuracy. The reduced six-item “sum” model achieved AUC = 0.915 (95% CI 0.831–0.980), sensitivity = 0.803, and specificity = 0.816, closely matching the full 20-item scale. A cutoff score of 7 optimized classification (sensitivity = 0.963, specificity = 0.825). This brief screener reduces patient burden and enables rapid triage in postpartum settings, providing a practical tool for early detection of women at high risk for CB-PTSD.
 
 ## Data Availability
 Due to patient medical confidentiality, we cannot share the raw dataset.

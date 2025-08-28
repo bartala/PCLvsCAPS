@@ -17,7 +17,7 @@ Please send any questions you might have about the code and/or the algorithm to 
 
 ## Citing
 If you find this paper useful for your research, please consider citing us:
-`
+```
 @article{jagodnik2025AIVI,
   title={Short 6-Item Screener for Childbirth-Related PTSD},
   author={},
@@ -28,4 +28,5 @@ If you find this paper useful for your research, please consider citing us:
   year={2025},
   publisher={}
 }
-`
+```
+

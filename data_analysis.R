@@ -365,7 +365,6 @@ if (length(all_oob_labels) > 1 &&
 # - sel_counts: named integer vector of selection counts per item (names = item_names)
 # - coef_logOR_store: named list; each [[item]] is a numeric vector of log-ORs across outer runs
 # - perm_drop_store: named list; each [[item]] is a numeric vector of AUC drops across outer runs
-# If any of the above may be missing, this code guards gracefully.
 
 suppressWarnings({
   if (!exists("item_names")) {

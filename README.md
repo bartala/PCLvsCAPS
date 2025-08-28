@@ -11,3 +11,21 @@ Due to patient medical confidentiality, we cannot share the raw dataset.
 (3) model evaluation using metrics including Area Under the Receiver Operating Characteristic (ROC) curve (AUC), Sensitivity, Specificity, and Precision (Positive Predictive value: PPV).
 
 `Reduced_PCL.ipynb` - calculate performances of a selecte threshold cutoff for the short 6-item PCL-5 questionnaire
+
+## Miscellaneous
+Please send any questions you might have about the code and/or the algorithm to alon.bartal@biu.ac.il.
+
+## Citing
+If you find this paper useful for your research, please consider citing us:
+`
+@article{jagodnik2025AIVI,
+  title={Short 6-Item Screener for Childbirth-Related PTSD},
+  author={},
+  journal={},
+  volume={},
+  number={},
+  pages={},
+  year={2025},
+  publisher={}
+}
+`

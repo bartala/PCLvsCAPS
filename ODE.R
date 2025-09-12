@@ -23,7 +23,7 @@ tbl <- ode_sweep(y, s6, thresholds = c(1:16) )
 tbl <- ode_sweep(y, s20, thresholds = c(19:38) )
 
 
-#--------------- spearman correlation of EPDS vs. PCL6 -------------------
+#--------------- spearman correlation of EPDS vs. PCL-5 6-items -------------------
 # Create the data frame of EPDS and PCL6 items
 df <- read.table(header = TRUE, text = "EPDS PCL6 ...")
 

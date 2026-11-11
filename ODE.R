@@ -18,11 +18,13 @@ s20 <- rowSums(PCL_CAPS[, item_names])
 # ODE at a specific threshold:
 ode_at(y, s6, t = 10)
 
+
 # Sweep all thresholds and pick the best:
-tbl <- ode_sweep(y, s6, thresholds = c(1:16) )
+tbl6  <- ode_sweep(y, s6,  thresholds = 1:16)
+tbl20 <- ode_sweep(y, s20, thresholds = 19:38)
 
-tbl <- ode_sweep(y, s20, thresholds = c(19:38) )
-
+print(tbl6[which.max(tbl6$ODE), ])    # best 6-item cutoff
+print(tbl20[which.max(tbl20$ODE), ])  # best 20-item cutoff
 
 #--------------- spearman correlation of EPDS vs. PCL-5 6-items -------------------
 # Create the data frame of EPDS and PCL6 items

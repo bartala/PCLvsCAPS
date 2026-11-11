@@ -18,6 +18,9 @@ R 4.5.0 (2025-04-11) on macOS, with the following packages:
 readxl 1.4.5, dplyr 1.1.4, tidyr 1.3.1, tibble 3.2.1, ggplot2 3.5.2,
 ggrepel 0.9.6, glmnet 4.1.9, logistf 1.26.1, pROC 1.18.5, caret 7.0.1.
 
+Python 3.13.18 (Google Colab) with scikit-learn 1.6.1 and the packages
+listed in requirements.txt.
+
 
 ## Miscellaneous
 Please send any questions you might have about the code and/or the algorithm to alon.bartal@biu.ac.il.

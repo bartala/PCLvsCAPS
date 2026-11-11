@@ -1,3 +1,5 @@
+# Run data_analysis.R first (it creates PCL_CAPS)
+
 # y: 0/1 true labels; s: numeric score (6-item sum)
 ode_at <- function(y, s, t) {
   mean((s >= t) == y)

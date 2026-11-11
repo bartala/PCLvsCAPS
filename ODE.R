@@ -10,9 +10,10 @@ ode_sweep <- function(y, s, thresholds) {
 }
 
 # Example usage:
-y <- PCL_CAPS_ALL$caps_ptsd1
-s6 <- rowSums(PCL_CAPS[, c("pcl_q10","pcl_q2","pcl_q7","pcl_q15","pcl_q4","pcl_q9")])
-s20<-rowSums(PCL_CAPS[, c(3:23)])
+item_names <- paste0("pcl_q", 1:20)
+y   <- PCL_CAPS$caps_ptsd1
+s6  <- rowSums(PCL_CAPS[, c("pcl_q10","pcl_q2","pcl_q7","pcl_q15","pcl_q4","pcl_q9")])
+s20 <- rowSums(PCL_CAPS[, item_names])
 
 # ODE at a specific threshold:
 ode_at(y, s6, t = 10)

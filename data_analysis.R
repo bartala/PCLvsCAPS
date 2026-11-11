@@ -146,9 +146,9 @@ for (b in 1:B_outer) {
   preds_mul  <- tryCatch(predict(fit_mul,  newdata = oob_df, type = "response"), error = function(e) NULL)
   if (any(vapply(list(preds_full, preds_sum, preds_mul), is.null, logical(1)))) next
   
-  r_full <- tryCatch(pROC::roc(lab_fac, preds_full, levels = c(0,1), direction = "auto", quiet = TRUE), error = function(e) NULL)
-  r_sum  <- tryCatch(pROC::roc(lab_fac, preds_sum,  levels = c(0,1), direction = "auto", quiet = TRUE), error = function(e) NULL)
-  r_mul  <- tryCatch(pROC::roc(lab_fac, preds_mul,  levels = c(0,1), direction = "auto", quiet = TRUE), error = function(e) NULL)
+  r_full <- tryCatch(pROC::roc(lab_fac, preds_full, levels = c(0,1), direction = "<", quiet = TRUE), error = function(e) NULL)
+  r_sum  <- tryCatch(pROC::roc(lab_fac, preds_sum,  levels = c(0,1), direction = "<", quiet = TRUE), error = function(e) NULL)
+  r_mul  <- tryCatch(pROC::roc(lab_fac, preds_mul,  levels = c(0,1), direction = "<", quiet = TRUE), error = function(e) NULL)
   if (any(vapply(list(r_full, r_sum, r_mul), is.null, logical(1)))) next
   
   auc_full_vec <- c(auc_full_vec, as.numeric(pROC::auc(r_full)))
@@ -212,7 +212,7 @@ for (b in 1:B_outer) {
     oob_perm[[vn]] <- sample(oob_perm[[vn]])  # permute one variable only
     pred_perm <- tryCatch(predict(fit_mul, newdata = oob_perm, type = "response"), error = function(e) NULL)
     if (!is.null(pred_perm)) {
-      r_perm <- tryCatch(pROC::roc(lab_fac, pred_perm, levels = c(0,1), direction = "auto", quiet = TRUE), error = function(e) NULL)
+      r_perm <- tryCatch(pROC::roc(lab_fac, pred_perm, levels = c(0,1), direction = "<", quiet = TRUE), error = function(e) NULL)
       if (!is.null(r_perm)) {
         perm_drop_store[[vn]] <- c(perm_drop_store[[vn]], base_auc_mul - as.numeric(pROC::auc(r_perm)))
       }
@@ -316,9 +316,9 @@ if (length(all_oob_labels) > 1 &&
     length(all_oob_labels) == length(all_oob_preds_multi)) {
   
   lab_all <- factor(all_oob_labels, levels = c(0,1))
-  roc_full  <- pROC::roc(lab_all, all_oob_preds_full,  levels = c(0,1), direction = "auto", quiet = TRUE)
-  roc_sum   <- pROC::roc(lab_all, all_oob_preds_sum,   levels = c(0,1), direction = "auto", quiet = TRUE)
-  roc_multi <- pROC::roc(lab_all, all_oob_preds_multi, levels = c(0,1), direction = "auto", quiet = TRUE)
+  roc_full  <- pROC::roc(lab_all, all_oob_preds_full,  levels = c(0,1), direction = "<", quiet = TRUE)
+  roc_sum   <- pROC::roc(lab_all, all_oob_preds_sum,   levels = c(0,1), direction = "<", quiet = TRUE)
+  roc_multi <- pROC::roc(lab_all, all_oob_preds_multi, levels = c(0,1), direction = "<", quiet = TRUE)
   
   auc_full <- as.numeric(pROC::auc(roc_full))
   auc_sum  <- as.numeric(pROC::auc(roc_sum))

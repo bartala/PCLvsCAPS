@@ -14,9 +14,10 @@ Due to patient medical confidentiality, we cannot share the raw dataset.
 `Reduced_PCL.ipynb` - calculate performances of a selecte threshold cutoff for the short 6-item PCL-5 questionnaire
 
 ## Software
-R 4.x.x with readxl, dplyr, tidyr, tibble, ggplot2, ggrepel,
-glmnet, logistf, pROC, caret (versions: ...).
-Python 3.x with packages in requirements.txt.
+R 4.5.0 (2025-04-11) on macOS, with the following packages:
+readxl 1.4.5, dplyr 1.1.4, tidyr 1.3.1, tibble 3.2.1, ggplot2 3.5.2,
+ggrepel 0.9.6, glmnet 4.1.9, logistf 1.26.1, pROC 1.18.5, caret 7.0.1.
+
 
 ## Miscellaneous
 Please send any questions you might have about the code and/or the algorithm to alon.bartal@biu.ac.il.

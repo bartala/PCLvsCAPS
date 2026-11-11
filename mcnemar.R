@@ -8,9 +8,6 @@ total20 <- factor(total20 >= 23, levels = c(FALSE, TRUE))
 total6 <- rowSums(PCL_CAPS_ALL_xlsx_BIRTH[, c('pcl_q10','pcl_q2','pcl_q7','pcl_q15','pcl_q4','pcl_q9')], na.rm = TRUE)
 total6 <- factor(total6 >= 7, levels = c(FALSE, TRUE))
 
-total6 <- rowSums(PCL_CAPS_ALL_xlsx_BIRTH[, c('pcl_q10','pcl_q2','pcl_q7','pcl_q15','pcl_q4','pcl_q9')], na.rm = TRUE)
-total6 <- factor(total6 >= 7, levels = c(FALSE, TRUE))
-
 
 tab <- table(total20, total6)
 mcnemar.test(tab)  # overall comparison
